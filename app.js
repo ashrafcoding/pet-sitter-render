@@ -24,7 +24,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "https://delightful-biscochitos-181cea.netlify.app/",
+  origin: "https://delightful-biscochitos-181cea.netlify.app",
   // function (origin, callback) {
   //   if (!origin) return callback(null, true);
   //   return callback(null, true);
