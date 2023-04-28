@@ -24,10 +24,11 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
-    return callback(null, true);
-  },
+  origin: "https://delightful-biscochitos-181cea.netlify.app/",
+  // function (origin, callback) {
+  //   if (!origin) return callback(null, true);
+  //   return callback(null, true);
+  // },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
   credentials: true
@@ -71,9 +72,9 @@ app.use("/notification", notificationRouter);
 app.use("/conversations", protect, conversationRouter);
 app.use("/messages", protect, messageRouter);
 app.use("/request", requestRouter);
-// app.get('*', (req, res) => {
-//   res.redirect('/')
-// })
+app.get('*', (req, res) => {
+  res.redirect('/')
+})
 
 
 // if (process.env.NODE_ENV === "production") {
