@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4282b375.css",
+    "main.js": "/static/js/main.a50ec9e8.js",
+    "static/media/landing-dog-sqr.jpg": "/static/media/landing-dog-sqr.6f472b8ac36bad7b6a49.jpg",
+    "static/media/6e9e1687.png": "/static/media/68f55f7799df6c8078a874cfe0a61a5e6e9e1687.bd1e00385152caa26559.png",
+    "index.html": "/index.html",
+    "main.4282b375.css.map": "/static/css/main.4282b375.css.map",
+    "main.a50ec9e8.js.map": "/static/js/main.a50ec9e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4282b375.css",
+    "static/js/main.a50ec9e8.js"
+  ]
+}

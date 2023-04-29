@@ -52,7 +52,9 @@ if (process.env.NODE_ENV === "development") {
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
-// app.use(express.static(join(__dirname, "build")));
+app.use(express.static(join(__dirname, "build")));
+
+
 
 app.use((req, res, next) => {
   req.io = io;
@@ -75,6 +77,11 @@ app.use("/request", requestRouter);
 // app.get('*', (req, res) => {
 //   res.redirect('/')
 // })
+
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 
 // if (process.env.NODE_ENV === "production") {
